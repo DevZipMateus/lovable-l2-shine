@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -16,7 +17,13 @@ const Hero = () => {
 
   return (
     <section id="inicio" className="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-background via-background to-muted">
-      <div className="container mx-auto px-4">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img src={heroBg} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-background/85"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             L2 Distribuidora
